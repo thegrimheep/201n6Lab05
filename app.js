@@ -1,3 +1,4 @@
+
 /////////////////////////////////////
 /* Problem 1 (this is your demo)
 Write a function called sum() that takes in two numbers as arguments and then returns an array where the first element is the sum of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
@@ -23,7 +24,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var multiply = function (x, y) {
   var multiplyNumber = x * y;
-  return [multiplyNumber, 'The product of ' + x + ' and ' + y + ' is ' + multiplyNumber  + '.'];
+  return [multiplyNumber, 'The product of ' + x + ' and ' + y + ' is ' + multiplyNumber + '.'];
 };
 
 testMultiply();
@@ -55,15 +56,14 @@ Write a function called sumArray() that takes in an array of numbers as its argu
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 var grandTotal = 0;
 var testArray = [2,3,4];
-
 function sumArray (testArray) {
-    for (var i=0; i < testArray.length; i ++) {
-        grandTotal = grandTotal + testArray[i];
+  for (var i = 0; i < testArray.length; i ++) {
+    grandTotal = grandTotal + testArray[i];
 
-    }
-    return [grandTotal, testArray + ' was passed in as an array of numbers, and '+ grandTotal + ' is their sum.' ];
+  }
+  return [grandTotal, testArray + ' was passed in as an array of numbers, and ' + grandTotal + ' is their sum.' ];
 }
-sumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
 
@@ -73,10 +73,21 @@ Write a function called multiplyArray() that takes an array of numbers as its ar
 "The numbers 2,3,4 have a product of 24."
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
-// Write your code here
+var newTotal = 1;
+var newArray = [2,3,4];
+
+function multiplyArray (testProduct) {
+  for (var i = 0; i < testProduct.length; i ++) {
+    newTotal = newTotal * testProduct[i];
+
+  }
+  return [newTotal, 'The numbers ' + testProduct + 'have a product of ' + newTotal + '.'];
+}
+
+testMultiplyArray(newArray);
 
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyArray(testArray);
+
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Submit the link to the repo via Canvas.
 
