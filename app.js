@@ -5,12 +5,12 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-var testSum = function (x, y) {
+var sum = function (x, y) {
   var sumNumber = x + y;
-  return [sumNumber, 'The sum of ' + x + ' and ' + y + ' is ' + sumNumber];
+  return [sumNumber, 'The sum of ' + x + ' and ' + y + ' is ' + sumNumber + '.'];
 };
 
-testSum(4, 7);
+testSum();
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
 
@@ -21,12 +21,12 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-var testMultiply = function (x, y) {
+var multiply = function (x, y) {
   var multiplyNumber = x * y;
-  return [multiplyNumber, 'The product of ' + x + ' and ' + y + ' is ' + multiplyNumber];
+  return [multiplyNumber, 'The product of ' + x + ' and ' + y + ' is ' + multiplyNumber  + '.'];
 };
 
-testMultiply(4, 7);
+testMultiply();
 
 
 
@@ -39,12 +39,12 @@ Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
-var testSumAndMultiply = function (x, y, z) {
+var sumAndMultiply = function (x, y, z) {
   var sumNumber = x + y + z;
   var multiplyNumber = x * y * z;
   return [sumNumber, multiplyNumber, x + ' and ' + y + ' and ' + z + ' sum to ' + sumNumber + '.', 'The product of ' + x + ' and ' + y + ' and ' + z + ' is ' + multiplyNumber + '.'];
 };
-testSumAndMultiply(4,7,5);
+testSumAndMultiply();
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. don't forget to create a new branch for your work on the next question!
 
@@ -53,12 +53,17 @@ testSumAndMultiply(4,7,5);
 Write a function called sumArray() that takes in an array of numbers as its argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
+var grandTotal = 0;
+var testArray = [2,3,4];
 
-// Write your code here
-testArray = [2,3,4];
+function sumArray (testArray) {
+    for (var i=0; i < testArray.length; i ++) {
+        grandTotal = grandTotal + testArray[i];
 
-// Here is the test for sumArray(); uncomment it to run it
-testSumArray(testArray);
+    }
+    return [grandTotal, testArray + ' was passed in as an array of numbers, and '+ grandTotal + ' is their sum.' ];
+}
+sumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
 
